@@ -7,6 +7,6 @@ public class PaperDecorator extends ItemDecorator {
     }
     @Override
     public double price() {
-        return 13 + super.price();
+        return 13; //+ super.price();
     }
 }
