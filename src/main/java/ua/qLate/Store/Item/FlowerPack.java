@@ -10,15 +10,14 @@ public class FlowerPack extends Item {
     public FlowerPack(Flower flower, int quantity) {
         this.flower = flower;
         this.quantity = quantity;
+
+        description = "This is " + flower.getFlowerType() + "pack.";
     }
 
-    public double getPrice() {
-        return quantity * flower.getPrice();
-    }
     public FlowerType GetFlowerType() {
         return flower.getFlowerType();
     }
 
     @Override
-    public double price() {return getPrice();}
+    public double price() {return quantity * flower.getPrice();}
 }

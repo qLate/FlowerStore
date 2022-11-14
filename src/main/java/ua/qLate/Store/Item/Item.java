@@ -1,10 +1,10 @@
 package ua.qLate.Store.Item;
 
-import lombok.Getter;
-
 public abstract class Item {
-    @Getter
-    public String description;
+    protected String description;
 
+    public String getDescription() {
+        return description;
+    }
     public abstract double price();
 }

@@ -8,6 +8,9 @@ public class RomashkaFlower extends Flower {
     public RomashkaFlower() {
         flowerType = FlowerType.ROMASHKA;
         color = FlowerColor.WHITE;
+        price = 3;
+        sepalLength = 2.5;
+        description = "This is romashka.";
     }
 }
 

@@ -8,6 +8,8 @@ public class RoseFlower extends Flower {
     public RoseFlower() {
         flowerType = FlowerType.ROSE;
         color = FlowerColor.RED;
+        price = 5;
+        sepalLength = 2;
+        description = "This is rose.";
     }
 }
-
