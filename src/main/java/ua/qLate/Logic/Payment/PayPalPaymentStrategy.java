@@ -1,4 +1,4 @@
-package ua.qLate.Service.Payment;
+package ua.qLate.Logic.Payment;
 
 public class PayPalPaymentStrategy implements IPayment {
 

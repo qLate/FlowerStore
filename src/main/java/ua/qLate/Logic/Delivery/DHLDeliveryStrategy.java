@@ -1,4 +1,4 @@
-package ua.qLate.Service.Delivery;
+package ua.qLate.Logic.Delivery;
 
 
 import ua.qLate.Store.Item.Item;

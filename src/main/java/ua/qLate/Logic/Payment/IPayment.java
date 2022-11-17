@@ -1,7 +1,6 @@
-package ua.qLate.Service.Payment;
+package ua.qLate.Logic.Payment;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

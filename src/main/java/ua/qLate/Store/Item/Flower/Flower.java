@@ -1,26 +1,39 @@
 package ua.qLate.Store.Item.Flower;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import ua.qLate.Store.Item.Item;
 import lombok.Getter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table
+@Getter
+@Setter
 public class Flower extends Item {
-    @Getter
     protected double sepalLength;
     protected FlowerColor color;
-    @Getter
     protected double price;
 
     protected FlowerType flowerType;
 
+    @Id @GeneratedValue
+    private Long id;
 
-    public String getColor() {
-        return color.toString();
-    }
     public final FlowerType getFlowerType() {
         return flowerType;
     }
 
     @Override
     public double price() {return price;}
+
+
 }
 

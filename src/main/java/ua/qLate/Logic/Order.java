@@ -1,7 +1,7 @@
-package ua.qLate.Service;
+package ua.qLate.Logic;
 
-import ua.qLate.Service.Delivery.IDelivery;
-import ua.qLate.Service.Payment.IPayment;
+import ua.qLate.Logic.Delivery.IDelivery;
+import ua.qLate.Logic.Payment.IPayment;
 import ua.qLate.Store.Item.Item;
 
 import java.util.LinkedList;

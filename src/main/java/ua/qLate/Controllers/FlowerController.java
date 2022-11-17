@@ -1,18 +1,28 @@
 package ua.qLate.Controllers;
 
-import ua.qLate.Store.Item.Flower.Specific.RomashkaFlower;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import ua.qLate.Services.FlowerService;
 import ua.qLate.Store.Item.Flower.Flower;
-import ua.qLate.Store.Item.Flower.Specific.RoseFlower;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("flower")
+@RequestMapping("api/v1/flower")
 public class FlowerController {
+    private final FlowerService service;
 
+    @Autowired
+    public FlowerController(FlowerService service) {
+        this.service = service;
+    }
     @GetMapping
-    public List<Flower> test() {return List.of(new RoseFlower(), new RomashkaFlower());}
+    public List<Flower> getFlowers() {
+        return service.getFlowers();
+    }
+
+    @PostMapping
+    public void addFlower(@RequestBody Flower flower) {
+        service.addFlower(flower);
+    }
 }
