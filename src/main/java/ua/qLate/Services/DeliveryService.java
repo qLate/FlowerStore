@@ -11,7 +11,13 @@ import java.util.List;
 
 @Service
 public class DeliveryService {
+
+    private List<IDelivery> deliveries;
+
     public List<IDelivery> getDeliveries() {
-        return List.of(new DHLDeliveryStrategy(), new PostDeliveryStrategy());
+        return deliveries;
+    }
+    public void addDelivery(IDelivery delivery) {
+        deliveries.add(delivery);
     }
 }

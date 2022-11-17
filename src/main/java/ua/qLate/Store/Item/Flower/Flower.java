@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Entity
 @Table
 @Getter
-@Setter
 public class Flower extends Item {
     protected double sepalLength;
     protected FlowerColor color;
@@ -27,13 +26,11 @@ public class Flower extends Item {
     @Id @GeneratedValue
     private Long id;
 
-    public final FlowerType getFlowerType() {
+    public FlowerType getFlowerType() {
         return flowerType;
     }
 
     @Override
     public double price() {return price;}
-
-
 }
 
