@@ -21,7 +21,6 @@ public class UserController {
     public List<AppUser> getUsers() {
         return service.getUsers();
     }
-
     @PostMapping
     public void addUsers(@RequestBody AppUser user) {
         service.addUser(user);
